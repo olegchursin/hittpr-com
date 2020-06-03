@@ -3,8 +3,14 @@ import Card from './Card';
 
 const CustomerCard = ({ customer }) => (
   <Card className="mb-8">
-    <p className="text-xl font-semibold">{customer.title}</p>
-    <p className="mt-6">{customer.content}</p>
+    <iframe
+      width="320"
+      height="180"
+      src={customer.youtubeUrl}
+      frameborder="0"
+      allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+      allowfullscreen
+    ></iframe>
     <div className="flex items-center mt-8">
       <img
         className="w-12 h-12 mr-4 rounded-full"

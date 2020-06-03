@@ -1,5 +1,11 @@
 import React from 'react';
 
+const styles = {
+  img: {
+    width: '300px'
+  }
+};
+
 const SplitSection = ({ id, primarySlot, secondarySlot, reverseOrder }) => (
   <section id={id} className="py-20">
     <div className="container mx-auto px-16 items-center flex flex-col lg:flex-row">
@@ -7,7 +13,7 @@ const SplitSection = ({ id, primarySlot, secondarySlot, reverseOrder }) => (
       <div
         className={`mt-10 lg:mt-0 w-full lg:w-1/2 ${reverseOrder && `order-last lg:order-first`}`}
       >
-        {secondarySlot}
+        <div style={styles.img}>{secondarySlot}</div>
       </div>
     </div>
   </section>
